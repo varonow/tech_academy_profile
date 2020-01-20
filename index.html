@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Victoria's Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <br />
+        <br />
+        <!-- Home (video & quote) -->
+        <div id="home">
+            <video autoplay muted loop id="typing_video">
+                <source src="videos/Typing.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div class="video_text">
+            <h1>Victoria's Portfolio</h1>
+            <p class="quote">
+                <q>The computer programmer is a creator of universes for which he alone is the lawgiver.
+                    <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
+                    <br>field of battle and to command such unswervingly dutiful actors or troops.
+                </q>	
+                <br>-Joseph Weizenbaum<br>
+                <br>
+                My name is Victoria. Welcome to my portfolio website. On it, I will tell you about my background and experience.<br>
+                <br>Thank you for stopping by and enjoy!
+            </p>
+        </div>
+        <!-- About -->
+        <div id="about" class="row">
+            <!-- left column -->
+            <div class="column_2">
+                <img src="images/Development.jpg" alt="Laptop">
+            </div>
+            <!-- Right column -->
+            <div class="column_1">
+                <h1>About</h1>
+                <p>I am a software developer who loves to code! As a mother of five, I enjoy time with my family and traveling. <br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br><br>I am a full-stack developer and would love to work with you on your project. <a href="#contact">Contact</a> me below!</p>
+            </div>
+        </div>
+        <!-- GitHub -->
+        <div id="github" class="row">
+            <div class="column_1">
+               <h1>GitHub</h1>
+               <p>You can view my coding projects on my GitHub profile here:<br>
+                <center><a href="https://github.com/varonow" target="_blank">VAronow GitHub</a></center></p>
+            </div>
+            <div class="column_2">
+                <a href="https://github.com/varonow" target="_blank"><img src="images/GitHub.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <!-- Contact -->
+        <div id="contact" class="row">
+            <div class="column_3">
+                <img src="images/Contact.jpg" alt="Contact">
+            </div>
+            <div class="column_1">
+                <h1>Contact</h1>
+                <form action="" method="GET">
+                    <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Please enter your name here">
+                    <label for="email">Email:</label>
+                        <input type="text" name="email" id="email" placeholder="Please enter your email here">
+                    <label for="message">Message:</label>
+                        <input type="text" id="message" name="message" placeholder="Please write your message here">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p>
+                <center>&copy; Pretend Portfolio, Designed by <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></center><br>
+            </p>
+        </footer>
+
+    </body>
+
+</html>
