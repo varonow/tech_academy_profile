@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    font-family: Perpetua, "Rockwell Extra Bold", serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /* Navbar */
@@ -133,15 +133,23 @@ img:hover {
 p {
     text-align: justify;
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 16px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-p:hover {
+p:hover,
+h3:hover {
     color: #00004d;
     transition: transform 1s;
     transform: scale(1.01);
+}
+
+h3 {
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: .6px;
+    font-size: 18px;
 }
 
 h1 {
@@ -190,7 +198,7 @@ input[type=text] {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-    font-family: Perpetua, "Rockwell Extra Bold", serif;
+    font-family:  "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 input[type=submit] {
@@ -201,7 +209,7 @@ input[type=submit] {
    border: none;
    border-radius: 4px;
    cursor: pointer;
-   font-family: Perpetua, "Rockwell Extra Bold", serif;
+   font-family:  "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
    display: block;
    margin: 0 auto;
 }
