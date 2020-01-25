@@ -5,12 +5,20 @@
         <meta charset="utf-8">
         <title>Victoria's Portfolio</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="js/portfolio.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
     </head>
 
     <body>
+        <!-- Fade in -->
+        <script>
+            document.body.className += ' fade-out';
+            $(function() { $('body').removeClass('fade-out'); } );
+        </script>
         <!-- Navbar -->
         <div class="navbar">
             <a href="#home" class="active">Home</a>
+            <a href="#slideshow">Slideshow</a>
             <a href="#about">About</a>
             <a href="#github">GitHub</a>
             <a href="#contact">Contact</a>
