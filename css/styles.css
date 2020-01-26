@@ -8,10 +8,11 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 0%;
     opacity: 1s;
     transition: 3s opacity;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.5vw;
 }
 
 body.fade-out {
@@ -23,30 +24,50 @@ body.fade-out {
 .navbar {
     top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 1;
     position: fixed;
     background-color: #000;
     overflow: hidden;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
 }
 
 .navbar a {
     color: #fff;
     text-align: center;
+    position: relative;
     text-decoration: none;
-    padding: 14px 16px;
+    padding: .75vw 1vw;
     font-family: "Avant Garde", Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 1.5vw;
     float: left;
+    display: block;
+    -webkit-animation: movenavText 5.75s;
+    animation: movenavText 5.75;
+    letter-spacing: .2vw;
+}
+
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+@keyframes movenavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
 }
 
 .navbar a:hover {
     background-color: #f4f4f4;
     color: #000;
     font-weight: bold;
+    cursor: pointer;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
 }
 
 .navbar a.active {
-    background-color: #a9a9a9;
+    background-color: darkgrey;
 }
 
 /* Video */
@@ -56,14 +77,29 @@ body.fade-out {
     bottom: 0;
     min-width: 100%;
     z-index: -1; /* for text to go over */
+    animation: zoominoutsinglefeatured 5s;
+}
+
+@keyframes zoominoutsinglefeatured {
+    0% { transform: scale(1.5, 1.5) }
+    100% { transform: scale(1,1) }
 }
 
 .video_text {
     color: #fff;
     background: rgba(0,0,0,0.5);
     width: 100%;
-    padding: 20px;
+    padding-top: .1vh;
+    padding-bottom: 1vh;
     margin-top: 23%;
+    position: relative;
+    -webkit-animation: moveNav 4s;
+    animation: movevideoText 4s;
+}
+
+@keyframes movevideoText {
+    from {top: -100vw;}
+    to {top: 0px;}
 }
 
 .video_text h1 {
@@ -90,35 +126,31 @@ q {
     font-weight: bold;
 }
 
-/* About */
-.column_1,
-.column_2,
-.column_3 {
-    float: left;
-    width: 50%;
-    padding: 10px;
-}
 
 .column_1 {
-    padding-top: 3%;
-    height: 400px;
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    height: 448px;
     background-color: #f2f2f2;
 
 }
 
 .column_2 {
-    padding-top: 1.9%;
-    height: 400px;
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    height: 448px;
     background-color: #4d4d4d;
 
 }
 
-.column_3 {
+/* .column_3 {
     padding-top: 3.5%;
     height: 450px;
     background-color: #4d4d4d;
 
-}
+} */
 
 .row:after {
     content: "";
@@ -130,9 +162,8 @@ img {
     filter: grayscale(75%);
     border-radius: 8px;
     max-width: 100%;
-    height: 340px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 100%;
+    margin: auto auto auto auto;
     display: block;
 }
 
@@ -144,10 +175,10 @@ img:hover {
 
 p {
     text-align: justify;
-    letter-spacing: 1px;
-    font-size: 16px;
-    padding-left: 20px;
-    padding-right: 20px;
+    letter-spacing: .1vw;
+    font-size: 1.5pw;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 p:hover,
@@ -194,17 +225,17 @@ center:hover {
     transform: scale(1.1);
 }
 
-/* Slideshow */
-#slideshow_background {
-    background: rgba(255,255,255, 0.35);
-}
 
 #slideshow_container {
     width: 39.5vw; /* vw for user screen size ie 39.5% of screensize */
     height: auto;
-    padding-top: 4%;
+    padding-top: 6%;
     position: relative;
     margin: auto;
+}
+
+#slideshow {
+    margin: 10px 0px 0px 10px;
 }
 
 .my_slides {
@@ -294,45 +325,101 @@ center:hover {
 }
 
 /* Contact Form */
-form {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    font-family: "Trebuchet MS", Optima;
+.Pop_Up_Button {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: white;
+    color: black;
+    border: solid;
+    cursor: pointer;
+    position: fixed;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;    
 }
 
-input[type=text] {
+@keyframes movePopup {
+    from {right: -40vw;}
+    to {bottom: 1.75vw;}
+}
+
+.form_popup {
+    border: 3px solid #f0f1f0;
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: 6px;
+    right: 6px;
+}
+
+.form_container {
+    max-width: 49vw;
+    padding: 9px;
+    background-color: white;
+}
+
+.form_container input[type=text] {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    font-family:  "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: gainsboro;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1vw;
 }
 
-input[type=submit] {
-   color: #fff;
-   background-color: #000;
-   font-weight: bold;
-   padding: 12px 20px;
-   border: none;
-   border-radius: 4px;
-   cursor: pointer;
-   font-family:  "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-   display: block;
-   margin: 0 auto;
+.form_container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    /* padding: 5px; */
+    margin-bottom: 1vh;
 }
 
-input[type=submit]:hover {
-    background-color: #fff;
-    color: #000;
+.form_container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+    /* padding: 5px; */
+    /* margin-bottom: 1vh; */
+}
+
+.form_container input[type=text]:focus {
+    background-color: darkblue;
+    outline: none;
+  }
+
+button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
     font-weight: bold;
-    transform: scale(1.5);
-    transition: transform 1.5s;
+    padding: 1.5vw 1.5vw;
+    border-style: solid;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
 }
 
+button:hover, .form_container .btn:hover {
+    color: white;
+    background-color: black;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: silver;
+}
+
+.form_container .cancel:hover{
+    color: white;
+    background-color: darkred;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    border-style: solid;
+    border-color: black;
+}
+
+/* footer */
 footer {
     padding: 2%;
     background-color: #fff;
